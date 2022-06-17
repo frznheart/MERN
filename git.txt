@@ -1,0 +1,28 @@
+git init // initaialize git , creats git folder
+
+git remote add origin <github_repo_url> //links remote repository and local repository
+
+git remote -v //to check our link to remote repo
+
+git status // to check our changes
+
+git add <file path>
+
+git add .
+
+git commit -m "short_message"
+
+//git commit -m "short-message" -m "detailed message"
+
+git branch //local branch
+
+git branch -r //remote branch
+
+git checkout -b <new_branch_name>
+
+git checkout //to change branch
+
+//git push origin <brach_name>
+git push origin javascript
+
+git restore . // to restore deleted files
