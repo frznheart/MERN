@@ -26,3 +26,5 @@ git checkout //to change branch
 git push origin javascript
 
 git restore . // to restore deleted files
+
+git clone <github_repo_url>
