@@ -24,12 +24,12 @@ let arr1 = [1, 2, 3, 4, 5];
 // console.log(arr1);
 //returns new array
 // console.log(arr1.slice(2, 4));
-// arr2 = arr1.filter((element) => {
-//   if (element == 2) {
-//     return true;
-//   }
-// });
+arr2 = arr1.filter((element) => {
+  if (element == 2) {
+    return true;
+  }
+});
 
-// console.log(arr2);
-arr3 = arr1.map((e1) => e1 * 2);
-console.log(arr3);
+console.log(arr2);
+// arr3 = arr1.map((e1) => e1 * 2);
+// console.log(arr3);
