@@ -30,9 +30,12 @@
 
 // console.log("i am 1 sec earlier than A");
 
-try {
-  a = "asd";
-  console.log({ a });
-} catch (err) {
-  console.log(err.message);
-}
+// try {
+//   a = "asd";
+//   console.log({ a });
+// } catch (err) {
+//   console.log(err.message);
+// }
+
+a = 1;
+a == 1 ? console.log(true) : console.log(false);
