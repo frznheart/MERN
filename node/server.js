@@ -36,9 +36,42 @@
 //   console.log(data);
 // });
 
-const path = require("path");
+// const path = require("path");
 
-console.log(__filename);
-console.log(path.basename(__filename));
-console.log(path.extname(__filename));
-console.log(path.join("custom", __filename));
+// console.log(__filename);
+// console.log(path.basename(__filename));
+// console.log(path.extname(__filename));
+// console.log(path.join("custom", __filename));
+
+// const os = require("os");
+
+// console.log(os);
+
+// const auth = require("./auth.js");
+
+// console.log({ auth });
+
+// auth.login();
+// auth.signup();
+
+//HTTP Module
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+  console.log("request accepted");
+  res.write("request accepted");
+  res.end();
+});
+
+server.listen(8000, () => {
+  console.log("listening");
+});
+
+//Rest API
+//HTTP VERBS/METHODS
+/*
+GET
+post
+PUT / PATCH
+DELETE
+*/
