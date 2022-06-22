@@ -53,20 +53,6 @@
 
 // auth.login();
 // auth.signup();
-
-//HTTP Module
-const http = require("http");
-
-const server = http.createServer((req, res) => {
-  console.log("request accepted");
-  res.write("request accepted");
-  res.end();
-});
-
-server.listen(8000, () => {
-  console.log("listening");
-});
-
 //Rest API
 //HTTP VERBS/METHODS
 /*
@@ -75,3 +61,41 @@ post
 PUT / PATCH
 DELETE
 */
+
+//HTTP Module
+const http = require("http");
+
+const { URL } = require("url");
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {
+    "Content-type": "application-json",
+  });
+
+  // console.log(req.url);
+
+  if (req.url == "/users" && req.method == "GET") {
+    res.write(JSON.stringify({ msg: "welcome to user page" }));
+    return res.end();
+  } else if (req.url == "/users" && req.method == "POST") {
+    res.write(JSON.stringify({ msg: "welcome to user page 2222" }));
+    return res.end();
+  } else if (req.url == "/contact") {
+    res.write(JSON.stringify({ msg: "welcome to contact page" }));
+    return res.end();
+  } else {
+    res.write(JSON.stringify({ msg: "404 not found" }));
+    return res.end();
+  }
+
+  // console.log("request accepted");
+
+  // res.write(JSON.stringify({ msg: "request accepted" }));
+
+  // res.write("request accepted");
+  res.end();
+});
+
+server.listen(8000, () => {
+  console.log("listening");
+});
